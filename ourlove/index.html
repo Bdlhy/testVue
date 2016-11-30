@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<meta charset="UTF-8">
 	<title>ourLove</title>
+	<link media="screen and (max-width:768px)" rel="stylesheet" href="styles/web.css"/>
+	<link media="screen and (min-width:768px)" rel="stylesheet" href="styles/pc.css"/>
 </head>
 <body>
 	<header class="header">
 		<h1>OurLove</h1>
 	</header>
-	<article class="main">
+	<article id="main" class="main">
 		<h2>Stay Together</h2>
-		<section class="total"></section>
+		<section class="total">{{totalTime}}</section>
 		<section class="next">
-			<h2>距离下一纪念日</h2>
-			<section class="next-day"></section>
-			<ul class="next-list"></ul>
+			<h2>下一纪念日:</h2>
+			<section class="next-day">
+				<h3 class="left-msg">{{timeList[0].name}}</h3><h3 class="right-msg">{{timeList[0].next}}</h3>
+			</section>
+			<ul class="next-list">
+				<li>
+					<h4 class="left-msg">{{timeList[1].date}}</h4><div class="right-msg">{{timeList[1].name}}</div>
+				</li>
+				<li>
+					<h4 class="left-msg">{{timeList[2].date}}</h4><div class="right-msg">{{timeList[2].name}}</div>
+				</li>
+				<li>
+					<h4 class="left-msg">{{timeList[3].date}}</h4><div class="right-msg">{{timeList[3].name}}</div>
+				</li>
+			</ul>
 		</section>
 	</article>
 
